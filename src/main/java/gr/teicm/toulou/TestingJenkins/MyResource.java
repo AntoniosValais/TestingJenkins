@@ -22,6 +22,7 @@ public class MyResource {
     public String getIt() {
     	
     	String s = "OK!!!";
+    	String x;
     	
         return s;
     }
