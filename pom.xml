@@ -22,6 +22,24 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            
+            <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-war-plugin</artifactId>
+	            <configuration>
+	                <manifest>
+	                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+	                </manifest>
+	                <archive>
+	                    <manifestEntries>
+	                        <Specification-Title>${project.name}</Specification-Title>
+	                        <Specification-Version>${project.version}</Specification-Version>
+	                        <Implementation-Version>${build.number}</Implementation-Version>
+	                    </manifestEntries>
+	                </archive>
+	            </configuration>
+	        </plugin>
+        
         </plugins>
     </build>
 
@@ -61,8 +79,11 @@
         
         
     </dependencies>
+    
     <properties>
         <jersey.version>2.2</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <build.number>VERSION</build.number>
     </properties>
+    
 </project>
