@@ -21,7 +21,7 @@ public class MyResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
     	
-    	String s = "OK!!!????";
+    	String s = "OK!!!hjbjh";
     	String x;
     	
         return s;
